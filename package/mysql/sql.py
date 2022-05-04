@@ -34,6 +34,7 @@ class SqlAction():
         # print(tables_list)
         if table not in tables_list:
             log.error(f'{table}不存在')
+            self.database.close()
             raise Exception
 
     def check_connection(self) -> None:
@@ -43,21 +44,21 @@ class SqlAction():
         self.database.ping()
         self.cursor = self.database.cursor()
 
-    def inser_into_mysql(self, table, values, condition='') -> None:
+    def insert_data_into_mysql(self, table, data, condition='') -> None:
         '''
         写入数据到数据库
         :param table: str 表名
-        :param values: tuple 值
+        :param data: tuple 值
         :param condition: str 条件
         '''
-        self.checak_connection()
+        self.check_connection()
         self.check_table_exist(table)
         if condition == '':
             sql = f"""INSERT INTO {table}
-         VALUES {values}"""
+         VALUES {data}"""
         else:
             sql = f"""INSERT INTO {table}
-            VALUES {values} WHERE {condition}"""
+            VALUES {data} WHERE {condition}"""
         try:
             # 执行sql语句
             self.cursor.execute(sql)
@@ -68,4 +69,38 @@ class SqlAction():
             # 如果发生错误则回滚
             self.database.rollback()
             log.error('写入数据库出错，已回滚')
+            self.database.close()
             raise Exception
+
+    def get_data_from_mysql(self, table, data_name ='*', condition=''):
+        '''
+        从数据库读取信息
+        :param table: str 表名
+        :param data_name: str 需要获取的字段名
+        :param condition: str 条件
+        :return:
+        '''
+        self.check_connection()
+        self.check_table_exist(table)
+        if condition == '':
+            sql = f"""SELECT {data_name} FROM {table}"""
+        else:
+            sql = f"""SELECT {data_name} FROM {table} WHERE {condition}"""
+        self.cursor.execute(sql)
+        data = self.cursor.fetchall()
+        if data_name.find(',') == -1 and data_name != '*':
+            new_data = []
+            for i in data:
+                new_data.append((i[0]))
+            data = tuple(new_data)
+        return data
+
+    def quit_database(self):
+        self.database.close()
+        log.info('已经关闭sql连接')
+
+if __name__ == '__main__':
+    test = SqlAction()
+    test.insert_data_into_mysql('user_info',('lcc','112233','user'))
+    test.get_data_from_mysql('user_info')
+    test.quit_database()
