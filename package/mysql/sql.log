@@ -1,13 +1,4 @@
-2022-05-04 12:55:27,397-root-INFO-Database Version:('5.7.34-log',)
-2022-05-04 12:55:27,397-root-INFO-数据库连接成功
-2022-05-04 12:55:57,699-root-INFO-数据库读取信息成功user_info->(('lcc', '123', 'root'), ('lcc2', '112233', 'user'), ('lcc3', '112233', 'user'), ('root', '123456', 'root'))
-2022-05-04 12:57:35,624-root-INFO-更新数据库成功user = "lcc":password = "12345",type = "user"->user_info
-2022-05-04 12:57:37,847-root-INFO-数据库读取信息成功user_info->(('lcc', '12345', 'user'), ('lcc2', '112233', 'user'), ('lcc3', '112233', 'user'), ('root', '123456', 'root'))
-2022-05-04 12:57:49,742-root-INFO-数据库读取信息成功user_info->('lcc', 'lcc2', 'lcc3', 'root')
-2022-05-04 12:57:55,054-root-INFO-数据库读取信息成功user_info->(('lcc', '12345'), ('lcc2', '112233'), ('lcc3', '112233'), ('root', '123456'))
-2022-05-04 12:59:10,645-root-ERROR-更新数据库失败，已回滚,sql:DELETE FROM user_info WHERE user*="lcc"
-2022-05-04 12:59:14,330-root-INFO-删除记录成功user_info-Xuser="lcc"
-2022-05-04 12:59:19,789-root-INFO-数据库读取信息成功user_info->(('lcc2', '112233', 'user'), ('lcc3', '112233', 'user'), ('root', '123456', 'root'))
-2022-05-04 13:00:14,574-root-INFO-写入数据库成功('lcc', '12345', 'user')->user_info
-2022-05-04 13:00:16,828-root-INFO-数据库读取信息成功user_info->(('lcc', '12345', 'user'), ('lcc2', '112233', 'user'), ('lcc3', '112233', 'user'), ('root', '123456', 'root'))
-2022-05-04 13:00:31,044-root-INFO-已经关闭sql连接
+2022-05-04 17:53:15,624-root-INFO-Database Version:('5.7.34-log',)
+2022-05-04 17:53:15,624-root-INFO-数据库连接成功
+2022-05-04 17:53:57,822-root-INFO-数据库读取信息成功user_info->('root',)
+2022-05-04 17:54:00,807-root-INFO-数据库读取信息成功user_info->123456

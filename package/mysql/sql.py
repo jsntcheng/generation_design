@@ -138,6 +138,8 @@ class SqlAction():
                 for i in data:
                     new_data.append((i[0]))
                 data = tuple(new_data)
+            if len(data) == 1 and condition != '':
+                data = data[0]
             log.info(f'数据库读取信息成功{table}->{data}')
             return data
         except:
