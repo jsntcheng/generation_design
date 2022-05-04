@@ -6,6 +6,11 @@ import logging as log
 
 class SqlAction():
     def __init__(self):
+        log.basicConfig(filename="config.log",
+                            filemode="w",
+                            format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",
+                            level=log.INFO)
+
         try:
             self.database = pymysql.connect(host='101.35.49.209',
                                             user='root',
@@ -72,7 +77,26 @@ class SqlAction():
             self.database.close()
             raise Exception
 
-    def get_data_from_mysql(self, table, data_name ='*', condition=''):
+    def update_data_into_mysql(self, table, set_data, condition) -> None:
+        '''
+        更新数据库信息
+        :param table: str 表名
+        :param set_data: str 赋值语句
+        :param condition: str 条件
+        '''
+        self.check_connection()
+        self.check_table_exist(table)
+        sql = f'UPDATE {table} SET {set_data} WHERE {condition}'
+        try:
+            self.cursor.execute(sql)
+            self.database.commit()
+            log.info('更新数据库成功')
+        except:
+            self.database.rollback()
+            log.error('更新数据库失败，已回滚')
+            raise Exception
+
+    def get_data_from_mysql(self, table, data_name ='*', condition='') -> None:
         '''
         从数据库读取信息
         :param table: str 表名
@@ -86,20 +110,26 @@ class SqlAction():
             sql = f"""SELECT {data_name} FROM {table}"""
         else:
             sql = f"""SELECT {data_name} FROM {table} WHERE {condition}"""
-        self.cursor.execute(sql)
-        data = self.cursor.fetchall()
-        if data_name.find(',') == -1 and data_name != '*':
-            new_data = []
-            for i in data:
-                new_data.append((i[0]))
-            data = tuple(new_data)
-        return data
+        try:
+            self.cursor.execute(sql)
+            data = self.cursor.fetchall()
+            if data_name.find(',') == -1 and data_name != '*':
+                new_data = []
+                for i in data:
+                    new_data.append((i[0]))
+                data = tuple(new_data)
+            return data
+        except:
+            self.database.close()
+            log.error('数据库读取信息失败')
+            raise Exception
 
     def quit_database(self):
         self.database.close()
         log.info('已经关闭sql连接')
 
 if __name__ == '__main__':
+    log.set
     test = SqlAction()
     test.insert_data_into_mysql('user_info',('lcc','112233','user'))
     test.get_data_from_mysql('user_info')
