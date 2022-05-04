@@ -6,7 +6,7 @@ import logging as log
 
 class SqlAction():
     def __init__(self):
-        log.basicConfig(filename="config.log",
+        log.basicConfig(filename="sql.log",
                             filemode="w",
                             format="%(asctime)s-%(name)s-%(levelname)s-%(message)s",
                             level=log.INFO)
@@ -18,10 +18,10 @@ class SqlAction():
                                             database='Generation')
             self.cursor = self.database.cursor()
             self.cursor.execute('SELECT VERSION()')
-            log.info('Database Version:', self.cursor.fetchone())
+            log.info(f'Database Version:{self.cursor.fetchone()}')
             log.info('数据库连接成功')
         except Exception as e:
-            log.error('数据库连接失败')
+            log.critical('数据库连接失败')
             raise e
 
     def check_table_exist(self, table) -> None:
@@ -38,7 +38,7 @@ class SqlAction():
         tables_list = [re.sub("'", '', each) for each in tables_list]
         # print(tables_list)
         if table not in tables_list:
-            log.error(f'{table}不存在')
+            log.critical(f'{table}不存在')
             self.database.close()
             raise Exception
 
@@ -46,8 +46,12 @@ class SqlAction():
         '''
         确认连接未断开，否则重连
         '''
-        self.database.ping()
-        self.cursor = self.database.cursor()
+        try:
+            self.database.ping(reconnect=False)
+        except:
+            log.warning('数据库重新连接')
+            self.database.ping()
+            self.cursor = self.database.cursor()
 
     def insert_data_into_mysql(self, table, data, condition='') -> None:
         '''
@@ -69,12 +73,28 @@ class SqlAction():
             self.cursor.execute(sql)
             # 提交到数据库执行
             self.database.commit()
-            log.info('写入数据库成功')
+            log.info(f'写入数据库成功{data}->{table}')
         except:
             # 如果发生错误则回滚
             self.database.rollback()
-            log.error('写入数据库出错，已回滚')
+            log.critical(f'写入数据库{data}->{table}出错，已回滚')
             self.database.close()
+            raise Exception
+
+    def delete_data_from_mysql(self, table, condition) -> None:
+        '''
+        从数据库删除一条记录
+        :param table: str 表名
+        :param condition: str 条件
+        '''
+        sql = f'DELETE FROM {table} WHERE {condition}'
+        try:
+            self.cursor.execute(sql)
+            self.database.commit()
+            log.info(f'删除记录成功{table}-X{condition}')
+        except:
+            self.database.rollback()
+            log.error(f'更新数据库失败，已回滚,sql:{sql}')
             raise Exception
 
     def update_data_into_mysql(self, table, set_data, condition) -> None:
@@ -90,10 +110,10 @@ class SqlAction():
         try:
             self.cursor.execute(sql)
             self.database.commit()
-            log.info('更新数据库成功')
+            log.info(f'更新数据库成功{condition}:{set_data}->{table}')
         except:
             self.database.rollback()
-            log.error('更新数据库失败，已回滚')
+            log.error(f'更新数据库失败，已回滚,sql:{sql}')
             raise Exception
 
     def get_data_from_mysql(self, table, data_name ='*', condition='') -> None:
@@ -118,10 +138,11 @@ class SqlAction():
                 for i in data:
                     new_data.append((i[0]))
                 data = tuple(new_data)
+            log.info(f'数据库读取信息成功{table}->{data}')
             return data
         except:
             self.database.close()
-            log.error('数据库读取信息失败')
+            log.error(f'数据库读取信息失败,sql:{sql}')
             raise Exception
 
     def quit_database(self):
@@ -129,8 +150,5 @@ class SqlAction():
         log.info('已经关闭sql连接')
 
 if __name__ == '__main__':
-    log.set
     test = SqlAction()
-    test.insert_data_into_mysql('user_info',('lcc','112233','user'))
-    test.get_data_from_mysql('user_info')
     test.quit_database()
