@@ -36,7 +36,7 @@ class SqlAction():
             log.error(f'{table}不存在')
             raise Exception
 
-    def checak_connection(self) -> None:
+    def check_connection(self) -> None:
         '''
         确认连接未断开，否则重连
         '''
