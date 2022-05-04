@@ -36,6 +36,13 @@ class SqlAction():
             log.error(f'{table}不存在')
             raise Exception
 
+    def checak_connection(self) -> None:
+        '''
+        确认连接未断开，否则重连
+        '''
+        self.database.ping()
+        self.cursor = self.database.cursor()
+
     def inser_into_mysql(self, table, values, condition='') -> None:
         '''
         写入数据到数据库
@@ -43,6 +50,8 @@ class SqlAction():
         :param values: tuple 值
         :param condition: str 条件
         '''
+        self.checak_connection()
+        self.check_table_exist(table)
         if condition == '':
             sql = f"""INSERT INTO {table}
          VALUES {values}"""
