@@ -7,13 +7,11 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QDialog, QPushButton, QMessageBox
-
 from package.mysql.sql import SqlAction
 
 
-class Ui_Dialog(object):
+class Login_window(object):
     def setupUi(self, Dialog):
         self.sql = SqlAction()
         self.Dialog = Dialog
@@ -54,7 +52,6 @@ class Ui_Dialog(object):
         self.reset_all.setObjectName("reset_all")
 
         self.retranslateUi(Dialog)
-        self.login.clicked.connect(self.check_password)
         self.reset_all.clicked.connect(self.password_input.clear)
         self.reset_all.clicked.connect(self.user_input.clear)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -70,23 +67,25 @@ class Ui_Dialog(object):
         self.forget.setText(_translate("Dialog", "忘记密码"))
         self.reset_all.setText(_translate("Dialog", "重置"))
 
-    def check_password(self):
-        user = self.user_input.text()
-        password = self.password_input.text()
-        if user == '':
-            self.showDialog('用户名为空')
-            self.password_input.clear()
-            return 0
-        user_tuple = self.sql.get_data_from_mysql('user_info','user')
-        if user not in user_tuple:
-            self.showDialog('用户名不存在')
-            return 0
-        else:
-            password_true = self.sql.get_data_from_mysql('user_info','password',f'user="{user}"')
-            if password_true == password:
-                self.showDialog('密码正确')
-            else:
-                self.showDialog('密码错误')
+    # def check_password(self):
+    #     user = self.user_input.text()
+    #     password = self.password_input.text()
+    #     if user == '':
+    #         self.showDialog('用户名为空')
+    #         self.password_input.clear()
+    #         return 0
+    #     user_tuple = self.sql.get_data_from_mysql('user_info','user')
+    #     if user not in user_tuple:
+    #         self.showDialog('用户名不存在')
+    #         return 0
+    #     else:
+    #         password_true = self.sql.get_data_from_mysql('user_info','password',f'user="{user}"')
+    #         if password_true == password:
+    #             self.showDialog('密码正确')
+    #         else:
+    #             self.showDialog('密码错误')
+    #     self.sql.quit_database()
 
     def showDialog(self, words):
         QMessageBox.about(self.Dialog,'RPA', words)
+

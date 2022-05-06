@@ -1,20 +1,2 @@
-2022-05-04 22:27:14,928-root-INFO-Database Version:('5.7.34-log',)
-2022-05-04 22:27:14,928-root-INFO-数据库连接成功
-2022-05-04 22:27:21,319-root-INFO-数据库读取信息成功user_info->('root', 'tingo')
-2022-05-04 22:27:21,341-root-INFO-数据库读取信息成功user_info->123456
-2022-05-04 22:27:28,300-root-INFO-数据库读取信息成功user_info->('root', 'tingo')
-2022-05-04 22:27:28,321-root-INFO-数据库读取信息成功user_info->123456
-2022-05-04 22:27:30,564-root-INFO-数据库读取信息成功user_info->('root', 'tingo')
-2022-05-04 22:27:30,587-root-INFO-数据库读取信息成功user_info->123456
-2022-05-04 22:27:32,189-root-INFO-数据库读取信息成功user_info->('root', 'tingo')
-2022-05-04 22:27:32,213-root-INFO-数据库读取信息成功user_info->123456
-2022-05-04 22:27:46,517-root-INFO-数据库读取信息成功user_info->('root', 'tingo')
-2022-05-04 22:27:46,540-root-INFO-数据库读取信息成功user_info->123456
-2022-05-04 22:28:07,343-root-INFO-数据库读取信息成功user_info->('root', 'tingo')
-2022-05-04 22:28:07,365-root-INFO-数据库读取信息成功user_info->123456
-2022-05-04 22:28:08,565-root-INFO-数据库读取信息成功user_info->('root', 'tingo')
-2022-05-04 22:28:08,588-root-INFO-数据库读取信息成功user_info->123456
-2022-05-04 22:31:53,384-root-INFO-数据库读取信息成功user_info->('root', 'tingo')
-2022-05-04 22:31:53,406-root-INFO-数据库读取信息成功user_info->123456
-2022-05-04 22:31:56,753-root-INFO-数据库读取信息成功user_info->('root', 'tingo')
-2022-05-04 22:31:56,777-root-INFO-数据库读取信息成功user_info->123456
+2022-05-06 19:11:15,605-root-INFO-Database Version:('5.7.34-log',)
+2022-05-06 19:11:15,605-root-INFO-数据库连接成功
