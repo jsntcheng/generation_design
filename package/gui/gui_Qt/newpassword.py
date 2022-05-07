@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'forget.ui'
+# Form implementation generated from reading ui file 'newpassword.ui'
 #
 # Created by: PyQt5 UI code generator 5.9.2
 #
@@ -20,17 +20,11 @@ class Ui_Dialog(object):
         font.setWeight(75)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(Dialog)
-        self.label_2.setGeometry(QtCore.QRect(100, 93, 31, 16))
-        self.label_2.setObjectName("label_2")
-        self.lineEdit = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit.setGeometry(QtCore.QRect(140, 90, 113, 20))
-        self.lineEdit.setObjectName("lineEdit")
         self.label_3 = QtWidgets.QLabel(Dialog)
-        self.label_3.setGeometry(QtCore.QRect(80, 133, 51, 16))
+        self.label_3.setGeometry(QtCore.QRect(90, 113, 41, 16))
         self.label_3.setObjectName("label_3")
         self.lineEdit_2 = QtWidgets.QLineEdit(Dialog)
-        self.lineEdit_2.setGeometry(QtCore.QRect(140, 130, 151, 20))
+        self.lineEdit_2.setGeometry(QtCore.QRect(140, 110, 151, 20))
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.pushButton = QtWidgets.QPushButton(Dialog)
         self.pushButton.setGeometry(QtCore.QRect(154, 170, 75, 31))
@@ -42,8 +36,7 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label.setText(_translate("Dialog", "找回密码"))
-        self.label_2.setText(_translate("Dialog", "账户"))
-        self.label_3.setText(_translate("Dialog", "密保邮箱"))
-        self.pushButton.setText(_translate("Dialog", "找回"))
+        self.label.setText(_translate("Dialog", "修改密码"))
+        self.label_3.setText(_translate("Dialog", "新密码"))
+        self.pushButton.setText(_translate("Dialog", "确认修改"))
 

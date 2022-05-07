@@ -5,7 +5,7 @@ from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from config import *
+from package.email.config import *
 
 
 class SMTPSender:
@@ -131,9 +131,6 @@ class SMTPSender:
 if __name__ == '__main__':
     SMTPSender.get_instance().send_mail({
         'subject': '测试邮箱标题',
-        'recipient': ['penglingqun@datagrand.com'],
-        'cc': ['lingqunpeng@icloud.com'],
-        'bcc': ['lingqunpeng@360.com', 'lingunpeng@gmail.com'],
-        'content': '测试邮件正文',
-        'filenames': []
+        'recipient': ['694625452@qq.com'],
+        'content': '测试邮件正文'
     })

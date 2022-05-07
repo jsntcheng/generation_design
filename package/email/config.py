@@ -1,5 +1,5 @@
 import json
-from constant import *
+from package.email.constant import *
 
 
 class Config:
