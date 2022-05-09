@@ -1,3 +1,5 @@
+from time import sleep
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -63,10 +65,11 @@ def wait_element(driver, selector, start_element = None, timeout = 10):
     while count < timeout:
         try:
             if not start_element:
-                return  driver.find_element(by = By.XPATH, selector = selector)
+                return  driver.find_element(by = By.XPATH, value = selector)
             else:
-                return start_element.find_element(by = By.XPATH, selector = selector)
+                return start_element.find_element(by = By.XPATH, value = selector)
         except:
+            sleep(1)
             count += 1
     driver.quit()
     raise Exception('等待元素超时')
@@ -84,9 +87,9 @@ def get_all_element(driver, selector, start_element = None, timeout = 10):
     while count < timeout:
         try:
             if  not start_element:
-                return driver.find_elements(by=By.XPATH, selector=selector)
+                return driver.find_elements(by=By.XPATH, value=selector)
             else:
-                return start_element.find_elements(by=By.XPATH, selector=selector)
+                return start_element.find_elements(by=By.XPATH, value=selector)
         except:
             count += 1
     driver.quit()
@@ -134,4 +137,21 @@ def get_element_txt(driver, selector, start_element = None, timeout = 10):
     '''
     wait_element(driver,selector,start_element,timeout)
 
+def get_doc(func):
+    '''
+    获取方法内的说明文字
+    :param func: 方法
+    :return: str 说明文字
+    '''
+
+    temp_list = func.__doc__.split('\n    ')
+    result = ""
+    for i in temp_list[2:-2]:
+        result += i.replace(':param ','')+'  '
+    return result
+
+driver = create_browser('https://www.baidu.com')
+
+str1 = get_element_txt.__doc__
 print(get_element_txt.__doc__)
+print(111)
