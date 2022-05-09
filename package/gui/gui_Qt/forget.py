@@ -77,7 +77,8 @@ class Forget(object):
             'recipient': [f'{input_email}'],
             'content': f'用户名:{input_user}||密码:{password}||请牢记'
         })
-        pass
+        self.showDialog('密码已经发送到邮箱，请查收')
+        self.Dialog.close()
 
     def showDialog(self, words):
         QMessageBox.about(self.Dialog,'RPA', words)

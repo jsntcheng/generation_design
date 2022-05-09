@@ -58,7 +58,7 @@ class Login_window(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Dialog.setWindowTitle(_translate("Dialog", "登录"))
         self.label.setText(_translate("Dialog", "账号"))
         self.label_2.setText(_translate("Dialog", "密码"))
         self.label_3.setText(_translate("Dialog", "欢迎使用RPA自动化系统"))

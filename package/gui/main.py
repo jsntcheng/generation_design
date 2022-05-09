@@ -5,7 +5,7 @@ from gui_Qt.new_user import NewUser
 from gui_Qt.index import IndexPage
 from gui_Qt.design_studio import Design
 from gui_Qt.forget import Forget
-
+from gui_Qt.browser import Browser
 class LoginWin(QDialog, Login_window):
     def __init__(self, index):
         super(QDialog, self).__init__(None)
@@ -50,6 +50,11 @@ class ForgetWin(QDialog, Forget):
         super(ForgetWin, self).__init__(None)
         self.setupUi(self)
 
+class BrowserWin(QDialog, Browser):
+    def __init__(self):
+        super(BrowserWin, self).__init__(None)
+        self.setupUi(self)
+
 if __name__ == '__main__':
     myapp = QApplication(sys.argv)
     index = IndexWin()
@@ -57,6 +62,7 @@ if __name__ == '__main__':
     newuser = NewUserWin()
     design = DesignWin()
     forget = ForgetWin()
+    browser = BrowserWin()
     login.forget.clicked.connect(forget.show)
     login.new_user.clicked.connect(newuser.show)
     login.login.clicked.connect(login.check_password)

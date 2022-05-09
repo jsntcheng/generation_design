@@ -183,4 +183,11 @@ class Design(object):
         self.action.setText(_translate("MainWindow", "保存"))
         self.action_2.setText(_translate("MainWindow", "修改密码"))
         self.action_3.setText(_translate("MainWindow", "退出登录"))
+        self.treeWidget.itemDoubleClicked['QTreeWidgetItem*','int'].connect(self.function)
+        self.pushButton.clicked.connect(self.run_it)
 
+    def function(self, item, column):
+        print(item.text(0))
+
+    def run_it(self):
+        print(self.plainTextEdit.toPlainText())

@@ -55,7 +55,7 @@ class NewUser(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Form", "Form"))
+        Dialog.setWindowTitle(_translate("Dialog", "注册"))
         self.label_2.setText(_translate("Form", "密码"))
         self.label.setText(_translate("Form", "账号"))
         self.label_3.setText(_translate("Form", "确认密码"))
@@ -66,6 +66,7 @@ class NewUser(object):
     def insert_user (self):
         sql_act = SqlAction()
         user_list = sql_act.get_data_from_mysql('user_info','user')
+        email_list = sql_act.get_data_from_mysql('user_info','email')
         user = self.user_input.text()
         if user == '':
             self.showDialog('请输入用户名')
@@ -87,10 +88,16 @@ class NewUser(object):
             self.password_input.clear()
             self.password_input_2.clear()
             return 0
+        email = self.password_input_3.text()
+        if email in email_list:
+            self.showDialog('此邮箱已经被使用')
+            self.password_input_3.clear()
+            return 0
         info = (self.user_input.text(),self.password_input.text(),'user',self.password_input_3.text())
         sql_act.insert_data_into_mysql('user_info',info)
         sql_act.quit_database()
         self.showDialog('注册成功')
+        self.Dialog.close()
 
     def showDialog(self, words):
         QMessageBox.about(self.Dialog,'RPA', words)
