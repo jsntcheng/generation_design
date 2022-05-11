@@ -10,6 +10,18 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Design(object):
     def setupUi(self, MainWindow):
+        self.tree_dict = {
+            '启动浏览器':'create_browser(',
+            '关闭浏览器':'close_browser(',
+            '切换操作页面':'switch_page(',
+            '刷新页面':'refresh_page(',
+            '等待元素出现':'wait_element(',
+            '获取所有元素':'get_all_element(',
+            '点击元素':'click_element(',
+            '获取元素属性':'get_element_attr(',
+            '设置输入框':'set_input(',
+            '获取元素内文字':'get_element_txt('
+        }
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(944, 605)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -186,7 +198,7 @@ class Design(object):
         self.treeWidget.itemDoubleClicked['QTreeWidgetItem*','int'].connect(self.function)
         self.pushButton.clicked.connect(self.run_it)
 
-    def function(self, item, column):
+    def function(self, item):
         print(item.text(0))
 
     def run_it(self):

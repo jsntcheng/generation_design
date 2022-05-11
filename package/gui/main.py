@@ -40,6 +40,7 @@ class IndexWin(QMainWindow, IndexPage):
     def __init__(self):
         super(QMainWindow, self).__init__(None)
         self.setupUi(self)
+
 class DesignWin(QMainWindow, Design):
     def __init__(self):
         super(DesignWin, self).__init__(None)
