@@ -1,10 +1,14 @@
-2022-05-13 20:44:47,503-root-INFO-Database Version:('5.7.34-log',)
-2022-05-13 20:44:47,503-root-INFO-数据库连接成功
-2022-05-13 20:44:53,772-root-INFO-数据库读取信息成功user_info->('111', 'root', 'test', 'tingo', 'zz123')
-2022-05-13 20:44:53,794-root-INFO-数据库读取信息成功user_info->123456
-2022-05-13 20:44:54,710-root-INFO-已经关闭sql连接
-2022-05-13 20:44:59,155-root-INFO-Database Version:('5.7.34-log',)
-2022-05-13 20:44:59,155-root-INFO-数据库连接成功
-2022-05-13 20:44:59,178-root-INFO-数据库读取信息成功session_list->('test', 'hhh', 'cc', 'userrr', 'uuu', 'rrs', 'ss', '1211', 'ssa', 'www', 'sda', '123213')
-2022-05-13 20:44:59,212-root-INFO-写入数据库成功('root', 'qweqwe', '', '')->session_list
-2022-05-13 20:44:59,212-root-INFO-已经关闭sql连接
+2022-05-16 20:07:11,105-root-INFO-Database Version:('5.7.34-log',)
+2022-05-16 20:07:11,106-root-INFO-数据库连接成功
+2022-05-16 20:07:17,287-root-INFO-数据库读取信息成功user_info->('111', 'root', 'test', 'tingo', 'zz123')
+2022-05-16 20:07:17,313-root-INFO-数据库读取信息成功user_info->123456
+2022-05-16 20:07:17,453-root-INFO-已经关闭sql连接
+2022-05-16 20:07:20,999-root-INFO-Database Version:('5.7.34-log',)
+2022-05-16 20:07:20,999-root-INFO-数据库连接成功
+2022-05-16 20:07:21,027-root-INFO-数据库读取信息成功session_list->('test', 'sdja', 'asdw', 'qwert', 'oop', 'djsk', 'ccd', 'ddx')
+2022-05-16 20:07:21,069-root-INFO-写入数据库成功('root', 'sasd', '', '', '')->session_list
+2022-05-16 20:07:21,069-root-INFO-已经关闭sql连接
+2022-05-16 20:07:28,055-root-INFO-Database Version:('5.7.34-log',)
+2022-05-16 20:07:28,055-root-INFO-数据库连接成功
+2022-05-16 20:07:28,096-root-INFO-写入数据库成功('root', 'sasd', '', '设置输入框', 'sssd')->session_list
+2022-05-16 20:07:28,096-root-INFO-已经关闭sql连接

@@ -1,4 +1,4 @@
-from rpa import log
+import logging as log
 
 def find_key_in_dict(dict1, value):
     dic_key = list(dict1.keys())

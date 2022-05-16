@@ -5,7 +5,7 @@ from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from package.email.config import *
+from python.package.email.config import *
 
 
 class SMTPSender:

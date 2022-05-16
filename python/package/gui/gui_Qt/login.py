@@ -8,7 +8,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QDialog, QPushButton, QMessageBox
-from package.mysql.sql import SqlAction
+from python.package.mysql.sql import SqlAction
 
 
 class Login_window(object):

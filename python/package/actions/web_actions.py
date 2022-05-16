@@ -9,6 +9,7 @@ def create_browser(url):
     '''
     打开浏览器
     :param url:进入的网址
+    :return:
     '''
     if url[0:4] != 'http':
         raise Exception('请输入正确的网址(带http(s)://)')
@@ -28,6 +29,7 @@ def close_browser(driver):
     '''
     关闭浏览器
     :param driver: web_driver对象
+    :return:
     '''
     driver.quit()
     print('已退出浏览器')
@@ -35,7 +37,7 @@ def close_browser(driver):
 def switch_page(driver, page_num):
     '''
     切换操作页面
-    :param driver: web_driver
+    :param driver: web_driver对象
     :param page_num: 切换到第几页
     :return:
     '''
@@ -50,7 +52,7 @@ def switch_page(driver, page_num):
 def refresh_page(driver):
     '''
     刷新页面
-    :param driver: web_driver
+    :param driver: web_driver对象
     :return:
     '''
     try:
@@ -63,7 +65,7 @@ def refresh_page(driver):
 def wait_element(driver, selector, start_element = None, timeout = 10):
     '''
     等待元素出现
-    :param driver: web_driver
+    :param driver: web_driver对象
     :param selector: Xpath
     :param start_element: 起始元素
     :param timeout: 超时时间
@@ -85,7 +87,7 @@ def wait_element(driver, selector, start_element = None, timeout = 10):
 def get_all_element(driver, selector, start_element = None, timeout = 10):
     '''
     获取同selector的所有元素
-    :param driver: web_driver
+    :param driver: web_driver对象
     :param selector: xpath
     :param start_element: 起始元素
     :param timeout: 超时时间
@@ -106,7 +108,7 @@ def get_all_element(driver, selector, start_element = None, timeout = 10):
 def click_element(driver, selector, start_element = None, timeout = 10):
     '''
     点击元素
-    :param driver: Web_driver
+    :param driver: web_driver对象
     :param selector: Xpath
     :param start_element: 起始元素
     :param timeout: 超时时间
@@ -121,7 +123,7 @@ def click_element(driver, selector, start_element = None, timeout = 10):
 def get_element_attr(driver, selector, attr, start_element = None, timeout = 10):
     '''
     获取元素元素
-    :param driver: web_driver
+    :param driver: web_driver对象
     :param selector: xpath
     :param attr: 需要获取的属性
     :param start_element: 起始元素
@@ -134,16 +136,28 @@ def get_element_attr(driver, selector, attr, start_element = None, timeout = 10)
         driver.quit()
         raise Exception('获取元素属性失败')
 
+def set_input(driver, selector, data, start_element = None, timeout = 10):
+    '''
+    设置输入框文字
+    :param driver: web_driver对象
+    :param selector: Xpath
+    :param data: 设置的文本
+    :param start_element: 起始元素
+    :param timeout: 超时时间
+    :return:
+    '''
+    wait_element(driver,selector,start_element,timeout).send_keys(data)
+
 def get_element_txt(driver, selector, start_element = None, timeout = 10):
     '''
     获取元素内所有文字
-    :param driver: web_driver
+    :param driver: web_driver对象
     :param selector: xpath
     :param start_element: 起始元素
     :param timeout: 超时时间
     :return: str 元素内文字
     '''
-    wait_element(driver,selector,start_element,timeout)
+    return wait_element(driver,selector,start_element,timeout).text()
 
 def get_doc(func):
     '''
@@ -159,12 +173,12 @@ def get_doc(func):
                 'get_all_element':get_all_element.__doc__.split('\n    '),
                 'click_element':click_element.__doc__.split('\n    '),
                 'get_element_attr':get_element_attr.__doc__.split('\n    '),
-                'get_element_txt':get_element_txt.__doc__.split('\n    ')
+                'get_element_txt':get_element_txt.__doc__.split('\n    '),
+                'set_input':set_input.__doc__.split('\n    ')
                 }
     temp_list = txt_dict[func]
     result = ""
-    for i in temp_list[2:-2]:
-        result += i.replace(':param ','')+'  '
+    for i in temp_list:
+        if i[0:6] == ':param':
+            result += i.replace(':param ','')+'  '
     return result
-
-print(get_doc('get_element_txt'))

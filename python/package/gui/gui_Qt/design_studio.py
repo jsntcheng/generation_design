@@ -8,9 +8,10 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QDialog
-from package.gui.gui_Qt.return_event_dialog import ReturnEventDialog
-from package.gui.gui_Qt.noreturn_event_dialog import NoReturnEventDialog
-from package.actions.web_actions import *
+from python.package.gui.gui_Qt.return_event_dialog import ReturnEventDialog
+from python.package.gui.gui_Qt.noreturn_event_dialog import NoReturnEventDialog
+from python.package.actions.web_actions import *
+from python.package.mysql.sql import SqlAction
 
 class Return(QDialog, ReturnEventDialog):
     def __init__(self):
@@ -36,6 +37,8 @@ class Design(object):
             '设置输入框':'set_input(',
             '获取元素内文字':'get_element_txt('
         }
+        self.no_return_list = ['关闭浏览器','切换操作页面','刷新页面','点击元素','设置输入框']
+        self.user = ''
         self.Return = Return()
         self.NoReturn = NoReturn()
         self.MainWindow = MainWindow
@@ -216,16 +219,17 @@ class Design(object):
         self.pushButton.clicked.connect(self.run_it)
 
     def function(self, item):
-        print(get_doc(self.tree_dict[item.text(0)][:-1]))
         _translate = QtCore.QCoreApplication.translate
-        self.Return.tool.setText(_translate("Dialog", item.text(0)))
-        self.Return.param.setText(_translate("Dialog", get_doc(self.tree_dict[item.text(0)][:-1])))
-        self.Return.show()
+        if item.text(0) in self.no_return_list:
+            self.NoReturn.tool.setText(_translate('Dialog',item.text(0)))
+            self.NoReturn.param.setText(_translate("Dialog", get_doc(self.tree_dict[item.text(0)][:-1])))
+            self.NoReturn.show()
+        else:
+            self.Return.tool.setText(_translate("Dialog", item.text(0)))
+            self.Return.param.setText(_translate("Dialog", get_doc(self.tree_dict[item.text(0)][:-1])))
+            self.Return.show()
 
-    def get_return_param(self):
-        param = self.Return.lineEdit.text()
-        mem = self.Return.lineEdit_2.text()
-        self.Return.close()
+
 
     def run_it(self):
         pass

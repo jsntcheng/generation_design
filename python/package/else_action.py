@@ -1,7 +1,7 @@
 import os
 import time
 import zipfile
-from rpa import log
+import logging as log
 from datetime import datetime, date, timedelta
 
 def get_date(form = "%Y-%m-%d", delta = 0):

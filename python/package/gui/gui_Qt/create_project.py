@@ -9,7 +9,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 
-from  package.mysql.sql import SqlAction
+from  python.package.mysql.sql import SqlAction
 
 class CreateProject(object):
     def setupUi(self, Dialog):
