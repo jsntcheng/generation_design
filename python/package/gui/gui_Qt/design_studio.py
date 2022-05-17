@@ -5,7 +5,7 @@
 # Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
-
+import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QDialog
 from python.package.gui.gui_Qt.return_event_dialog import ReturnEventDialog
@@ -232,8 +232,12 @@ class Design(object):
 
 
     def run_it(self):
-        pass
-        # print(self.plainTextEdit.toPlainText())
+        temp_file = open('temp.py','w',encoding='gbk')
+        temp_file.write(self.plainTextEdit.toPlainText())
+        path = os.path.dirname(__file__)
+        path2 = path
+        path.strip('package\gui\gui_Qt')
+        os.system(path + 'python' + path2 + '\\temp.py')
 
     def change_title(self,name):
         _translate = QtCore.QCoreApplication.translate

@@ -1,14 +1,22 @@
-2022-05-16 20:07:11,105-root-INFO-Database Version:('5.7.34-log',)
-2022-05-16 20:07:11,106-root-INFO-数据库连接成功
-2022-05-16 20:07:17,287-root-INFO-数据库读取信息成功user_info->('111', 'root', 'test', 'tingo', 'zz123')
-2022-05-16 20:07:17,313-root-INFO-数据库读取信息成功user_info->123456
-2022-05-16 20:07:17,453-root-INFO-已经关闭sql连接
-2022-05-16 20:07:20,999-root-INFO-Database Version:('5.7.34-log',)
-2022-05-16 20:07:20,999-root-INFO-数据库连接成功
-2022-05-16 20:07:21,027-root-INFO-数据库读取信息成功session_list->('test', 'sdja', 'asdw', 'qwert', 'oop', 'djsk', 'ccd', 'ddx')
-2022-05-16 20:07:21,069-root-INFO-写入数据库成功('root', 'sasd', '', '', '')->session_list
-2022-05-16 20:07:21,069-root-INFO-已经关闭sql连接
-2022-05-16 20:07:28,055-root-INFO-Database Version:('5.7.34-log',)
-2022-05-16 20:07:28,055-root-INFO-数据库连接成功
-2022-05-16 20:07:28,096-root-INFO-写入数据库成功('root', 'sasd', '', '设置输入框', 'sssd')->session_list
-2022-05-16 20:07:28,096-root-INFO-已经关闭sql连接
+2022-05-16 21:44:47,796-root-INFO-Database Version:('5.7.34-log',)
+2022-05-16 21:44:47,796-root-INFO-数据库连接成功
+2022-05-16 21:44:53,030-root-INFO-数据库读取信息成功user_info->('111', 'root', 'test', 'tingo', 'zz123')
+2022-05-16 21:44:53,055-root-INFO-数据库读取信息成功user_info->123456
+2022-05-16 21:44:53,633-root-INFO-已经关闭sql连接
+2022-05-16 21:44:56,929-root-INFO-Database Version:('5.7.34-log',)
+2022-05-16 21:44:56,930-root-INFO-数据库连接成功
+2022-05-16 21:44:56,953-root-INFO-数据库读取信息成功session_list->('test', 'sdja', 'asdw', 'qwert', 'oop', 'djsk', 'ccd', 'ddx', 'sasd')
+2022-05-16 21:44:56,989-root-INFO-写入数据库成功('root', 'sda', '', '', '')->session_list
+2022-05-16 21:44:56,990-root-INFO-已经关闭sql连接
+2022-05-16 21:45:14,500-root-INFO-Database Version:('5.7.34-log',)
+2022-05-16 21:45:14,500-root-INFO-数据库连接成功
+2022-05-16 21:45:14,540-root-INFO-写入数据库成功('root', 'sda', 'driver', '启动浏览器', "'https://www.baidu.com'")->session_list
+2022-05-16 21:45:14,540-root-INFO-已经关闭sql连接
+2022-05-16 21:47:25,310-root-INFO-Database Version:('5.7.34-log',)
+2022-05-16 21:47:25,310-root-INFO-数据库连接成功
+2022-05-16 21:47:25,361-root-INFO-写入数据库成功('root', 'sda', '', '设置输入框', "driver,'//input','中国天气网'")->session_list
+2022-05-16 21:47:25,361-root-INFO-已经关闭sql连接
+2022-05-16 21:48:04,512-root-INFO-Database Version:('5.7.34-log',)
+2022-05-16 21:48:04,512-root-INFO-数据库连接成功
+2022-05-16 21:48:04,557-root-INFO-写入数据库成功('root', 'sda', '', '点击元素', 'driver,\'//*[@id="su"]\'')->session_list
+2022-05-16 21:48:04,558-root-INFO-已经关闭sql连接
