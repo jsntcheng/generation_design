@@ -1,0 +1,755 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "pyqt",
+    "python"
+  ],
+  "extracted_package_dir": "C:\\Users\\lcc\\anaconda3\\pkgs\\anyqt-0.0.13-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/AnyQt-0.0.13.dist-info/INSTALLER",
+    "Lib/site-packages/AnyQt-0.0.13.dist-info/LICENSE.txt",
+    "Lib/site-packages/AnyQt-0.0.13.dist-info/METADATA",
+    "Lib/site-packages/AnyQt-0.0.13.dist-info/RECORD",
+    "Lib/site-packages/AnyQt-0.0.13.dist-info/REQUESTED",
+    "Lib/site-packages/AnyQt-0.0.13.dist-info/WHEEL",
+    "Lib/site-packages/AnyQt-0.0.13.dist-info/direct_url.json",
+    "Lib/site-packages/AnyQt-0.0.13.dist-info/top_level.txt",
+    "Lib/site-packages/AnyQt/QtCore.py",
+    "Lib/site-packages/AnyQt/QtDBus.py",
+    "Lib/site-packages/AnyQt/QtDesigner.py",
+    "Lib/site-packages/AnyQt/QtGui.py",
+    "Lib/site-packages/AnyQt/QtHelp.py",
+    "Lib/site-packages/AnyQt/QtMacExtras.py",
+    "Lib/site-packages/AnyQt/QtMultimedia.py",
+    "Lib/site-packages/AnyQt/QtMultimediaWidgets.py",
+    "Lib/site-packages/AnyQt/QtNetwork.py",
+    "Lib/site-packages/AnyQt/QtOpenGL.py",
+    "Lib/site-packages/AnyQt/QtPrintSupport.py",
+    "Lib/site-packages/AnyQt/QtQml.py",
+    "Lib/site-packages/AnyQt/QtQuick.py",
+    "Lib/site-packages/AnyQt/QtSql.py",
+    "Lib/site-packages/AnyQt/QtSvg.py",
+    "Lib/site-packages/AnyQt/QtTest.py",
+    "Lib/site-packages/AnyQt/QtWebChannel.py",
+    "Lib/site-packages/AnyQt/QtWebEngineCore.py",
+    "Lib/site-packages/AnyQt/QtWebEngineWidgets.py",
+    "Lib/site-packages/AnyQt/QtWebKit.py",
+    "Lib/site-packages/AnyQt/QtWebKitWidgets.py",
+    "Lib/site-packages/AnyQt/QtWebSockets.py",
+    "Lib/site-packages/AnyQt/QtWidgets.py",
+    "Lib/site-packages/AnyQt/QtWinExtras.py",
+    "Lib/site-packages/AnyQt/QtX11Extras.py",
+    "Lib/site-packages/AnyQt/QtXml.py",
+    "Lib/site-packages/AnyQt/QtXmlPatterns.py",
+    "Lib/site-packages/AnyQt/__init__.py",
+    "Lib/site-packages/AnyQt/_api.py",
+    "Lib/site-packages/AnyQt/_backport/QtCore.py",
+    "Lib/site-packages/AnyQt/_backport/QtDBus.py",
+    "Lib/site-packages/AnyQt/_backport/QtDesigner.py",
+    "Lib/site-packages/AnyQt/_backport/QtGui.py",
+    "Lib/site-packages/AnyQt/_backport/QtHelp.py",
+    "Lib/site-packages/AnyQt/_backport/QtMultimedia.py",
+    "Lib/site-packages/AnyQt/_backport/QtNetwork.py",
+    "Lib/site-packages/AnyQt/_backport/QtOpenGL.py",
+    "Lib/site-packages/AnyQt/_backport/QtSql.py",
+    "Lib/site-packages/AnyQt/_backport/QtSvg.py",
+    "Lib/site-packages/AnyQt/_backport/QtTest.py",
+    "Lib/site-packages/AnyQt/_backport/QtWebKit.py",
+    "Lib/site-packages/AnyQt/_backport/QtXml.py",
+    "Lib/site-packages/AnyQt/_backport/QtXmlPatterns.py",
+    "Lib/site-packages/AnyQt/_backport/__init__.py",
+    "Lib/site-packages/AnyQt/_backport/_utils.py",
+    "Lib/site-packages/AnyQt/_backport/uic.py",
+    "Lib/site-packages/AnyQt/_fixes.py",
+    "Lib/site-packages/AnyQt/importhooks.py",
+    "Lib/site-packages/AnyQt/sip.py",
+    "Lib/site-packages/AnyQt/uic.py",
+    ".nonadmin",
+    "Lib/site-packages/AnyQt/__pycache__/QtCore.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtDBus.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtDesigner.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtGui.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtHelp.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtMacExtras.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtMultimedia.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtMultimediaWidgets.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtNetwork.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtOpenGL.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtPrintSupport.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtQml.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtQuick.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtSql.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtSvg.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtTest.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtWebChannel.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtWebEngineCore.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtWebEngineWidgets.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtWebKit.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtWebKitWidgets.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtWebSockets.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtWidgets.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtWinExtras.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtX11Extras.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtXml.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/QtXmlPatterns.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/_api.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtCore.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtDBus.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtDesigner.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtGui.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtHelp.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtMultimedia.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtNetwork.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtOpenGL.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtSql.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtSvg.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtTest.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtWebKit.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtXml.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/QtXmlPatterns.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/__init__.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/_utils.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/_backport/__pycache__/uic.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/_fixes.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/importhooks.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/sip.cpython-39.pyc",
+    "Lib/site-packages/AnyQt/__pycache__/uic.cpython-39.pyc"
+  ],
+  "fn": "anyqt-0.0.13-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "80b8f5444de63a567a6e4ab757cd55a3",
+  "license": "GPL-3.0",
+  "license_family": "GPL3",
+  "link": {
+    "source": "C:\\Users\\lcc\\anaconda3\\pkgs\\anyqt-0.0.13-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "8089ee05c804cc0251797183c94072a3",
+  "name": "anyqt",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\lcc\\anaconda3\\pkgs\\anyqt-0.0.13-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/AnyQt-0.0.13.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/AnyQt-0.0.13.dist-info/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "sha256_in_prefix": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "size_in_bytes": 35147
+      },
+      {
+        "_path": "site-packages/AnyQt-0.0.13.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "ce57e5dc49f9936c347996f54668aade5eb1dd565352b12b5de1d4871d89581c",
+        "sha256_in_prefix": "ce57e5dc49f9936c347996f54668aade5eb1dd565352b12b5de1d4871d89581c",
+        "size_in_bytes": 1490
+      },
+      {
+        "_path": "site-packages/AnyQt-0.0.13.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "5f10578807ab2cdd85cf9664607da449562d70a99506f7d24bd9b42d8bc8574e",
+        "sha256_in_prefix": "5f10578807ab2cdd85cf9664607da449562d70a99506f7d24bd9b42d8bc8574e",
+        "size_in_bytes": 6994
+      },
+      {
+        "_path": "site-packages/AnyQt-0.0.13.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/AnyQt-0.0.13.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710",
+        "sha256_in_prefix": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/AnyQt-0.0.13.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "2871cb37eb0f2fb5379e8403bca1dddf2c0097604faf48cd7b2d07eb957fb670",
+        "sha256_in_prefix": "2871cb37eb0f2fb5379e8403bca1dddf2c0097604faf48cd7b2d07eb957fb670",
+        "size_in_bytes": 78
+      },
+      {
+        "_path": "site-packages/AnyQt-0.0.13.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "e420a69bd2ad3ec316317cf9568faeb0d308c48baf25f891b293a49ecbfaf4bc",
+        "sha256_in_prefix": "e420a69bd2ad3ec316317cf9568faeb0d308c48baf25f891b293a49ecbfaf4bc",
+        "size_in_bytes": 6
+      },
+      {
+        "_path": "site-packages/AnyQt/QtCore.py",
+        "path_type": "hardlink",
+        "sha256": "5752197ce2b0978ca91bd897c4dfc3cebadeb53adfc32309d5182f60c5afbe1e",
+        "sha256_in_prefix": "5752197ce2b0978ca91bd897c4dfc3cebadeb53adfc32309d5182f60c5afbe1e",
+        "size_in_bytes": 8003
+      },
+      {
+        "_path": "site-packages/AnyQt/QtDBus.py",
+        "path_type": "hardlink",
+        "sha256": "bd3d21fcc1ccd877a88dc26c446e42adb886c9a06622bbb06f6bc6d8ab21c45c",
+        "sha256_in_prefix": "bd3d21fcc1ccd877a88dc26c446e42adb886c9a06622bbb06f6bc6d8ab21c45c",
+        "size_in_bytes": 236
+      },
+      {
+        "_path": "site-packages/AnyQt/QtDesigner.py",
+        "path_type": "hardlink",
+        "sha256": "9436d420d3beb7455451c2b221a956b64db0af4bd833facaecf3d22edfed81ef",
+        "sha256_in_prefix": "9436d420d3beb7455451c2b221a956b64db0af4bd833facaecf3d22edfed81ef",
+        "size_in_bytes": 248
+      },
+      {
+        "_path": "site-packages/AnyQt/QtGui.py",
+        "path_type": "hardlink",
+        "sha256": "c0ce8be71f98434e1b3715ef7811ae229c97735fd49e2f5c813f2557160d39fb",
+        "sha256_in_prefix": "c0ce8be71f98434e1b3715ef7811ae229c97735fd49e2f5c813f2557160d39fb",
+        "size_in_bytes": 8048
+      },
+      {
+        "_path": "site-packages/AnyQt/QtHelp.py",
+        "path_type": "hardlink",
+        "sha256": "83c5b3e66010e486195bbaee04f4889f6d377a86aca32884cb0e7bd03c919cf2",
+        "sha256_in_prefix": "83c5b3e66010e486195bbaee04f4889f6d377a86aca32884cb0e7bd03c919cf2",
+        "size_in_bytes": 312
+      },
+      {
+        "_path": "site-packages/AnyQt/QtMacExtras.py",
+        "path_type": "hardlink",
+        "sha256": "f927591127f2002220609cb5d6ce3e5f01e2191671cdb36c4573a5d6fce1264b",
+        "sha256_in_prefix": "f927591127f2002220609cb5d6ce3e5f01e2191671cdb36c4573a5d6fce1264b",
+        "size_in_bytes": 358
+      },
+      {
+        "_path": "site-packages/AnyQt/QtMultimedia.py",
+        "path_type": "hardlink",
+        "sha256": "dc552f8c3cbe05b8272e784608c5a54ee2f2417f31a6a514961724e18e5e8020",
+        "sha256_in_prefix": "dc552f8c3cbe05b8272e784608c5a54ee2f2417f31a6a514961724e18e5e8020",
+        "size_in_bytes": 336
+      },
+      {
+        "_path": "site-packages/AnyQt/QtMultimediaWidgets.py",
+        "path_type": "hardlink",
+        "sha256": "6fa5ce15723e3b93d1caa81279b9ca887d958f23d2d8973aef4117e0943cf15f",
+        "sha256_in_prefix": "6fa5ce15723e3b93d1caa81279b9ca887d958f23d2d8973aef4117e0943cf15f",
+        "size_in_bytes": 335
+      },
+      {
+        "_path": "site-packages/AnyQt/QtNetwork.py",
+        "path_type": "hardlink",
+        "sha256": "368011318d20b92f4376121e98204b6d6a17d8932868d318401642e55c2bc96d",
+        "sha256_in_prefix": "368011318d20b92f4376121e98204b6d6a17d8932868d318401642e55c2bc96d",
+        "size_in_bytes": 1417
+      },
+      {
+        "_path": "site-packages/AnyQt/QtOpenGL.py",
+        "path_type": "hardlink",
+        "sha256": "8c69fd91b442624a4bb0a2f5100fa1ceb21551e7d6e526cf9744fd69bb0b4d82",
+        "sha256_in_prefix": "8c69fd91b442624a4bb0a2f5100fa1ceb21551e7d6e526cf9744fd69bb0b4d82",
+        "size_in_bytes": 321
+      },
+      {
+        "_path": "site-packages/AnyQt/QtPrintSupport.py",
+        "path_type": "hardlink",
+        "sha256": "f6a17a9e0230579b76965520a0b8c652178da58ec5d4809f0c72793ccafb684e",
+        "sha256_in_prefix": "f6a17a9e0230579b76965520a0b8c652178da58ec5d4809f0c72793ccafb684e",
+        "size_in_bytes": 972
+      },
+      {
+        "_path": "site-packages/AnyQt/QtQml.py",
+        "path_type": "hardlink",
+        "sha256": "37bb8a44d6c1bef317f1803961d8f524cb814e34b1889883d511d1233f7aba8b",
+        "sha256_in_prefix": "37bb8a44d6c1bef317f1803961d8f524cb814e34b1889883d511d1233f7aba8b",
+        "size_in_bytes": 294
+      },
+      {
+        "_path": "site-packages/AnyQt/QtQuick.py",
+        "path_type": "hardlink",
+        "sha256": "3ec233b9361af655cd74139833c159239148c61a2a61e074475651c4eb2312ef",
+        "sha256_in_prefix": "3ec233b9361af655cd74139833c159239148c61a2a61e074475651c4eb2312ef",
+        "size_in_bytes": 300
+      },
+      {
+        "_path": "site-packages/AnyQt/QtSql.py",
+        "path_type": "hardlink",
+        "sha256": "16e083a46d29a256c90a13da42e19ef2ff8d4f1d17155b93600a1926d39c0171",
+        "sha256_in_prefix": "16e083a46d29a256c90a13da42e19ef2ff8d4f1d17155b93600a1926d39c0171",
+        "size_in_bytes": 308
+      },
+      {
+        "_path": "site-packages/AnyQt/QtSvg.py",
+        "path_type": "hardlink",
+        "sha256": "4a576f514ebe9ba5f72dc4233658dc8626dcb4e20b9da27a1383c593fd6ad1da",
+        "sha256_in_prefix": "4a576f514ebe9ba5f72dc4233658dc8626dcb4e20b9da27a1383c593fd6ad1da",
+        "size_in_bytes": 308
+      },
+      {
+        "_path": "site-packages/AnyQt/QtTest.py",
+        "path_type": "hardlink",
+        "sha256": "f7843d80291fb793a3b30e7ff72f1c193a03b2a01b035853d5f7ee7291f34064",
+        "sha256_in_prefix": "f7843d80291fb793a3b30e7ff72f1c193a03b2a01b035853d5f7ee7291f34064",
+        "size_in_bytes": 5367
+      },
+      {
+        "_path": "site-packages/AnyQt/QtWebChannel.py",
+        "path_type": "hardlink",
+        "sha256": "c6399367458d180bad04c664d5960f6ad65178c462218f4512e846d4afa1db7c",
+        "sha256_in_prefix": "c6399367458d180bad04c664d5960f6ad65178c462218f4512e846d4afa1db7c",
+        "size_in_bytes": 315
+      },
+      {
+        "_path": "site-packages/AnyQt/QtWebEngineCore.py",
+        "path_type": "hardlink",
+        "sha256": "4e21abd18b7858ad6527b3b0117f0a35ed44f2873991341277e57ac884069304",
+        "sha256_in_prefix": "4e21abd18b7858ad6527b3b0117f0a35ed44f2873991341277e57ac884069304",
+        "size_in_bytes": 239
+      },
+      {
+        "_path": "site-packages/AnyQt/QtWebEngineWidgets.py",
+        "path_type": "hardlink",
+        "sha256": "fec8c00f7db8f1d9953e3cdb0b32604647631ea43a3168eba2137e3da184de05",
+        "sha256_in_prefix": "fec8c00f7db8f1d9953e3cdb0b32604647631ea43a3168eba2137e3da184de05",
+        "size_in_bytes": 333
+      },
+      {
+        "_path": "site-packages/AnyQt/QtWebKit.py",
+        "path_type": "hardlink",
+        "sha256": "bada52d4bb183a044a94f597c08b124133997be8e51d9fce102b1324794b8b84",
+        "sha256_in_prefix": "bada52d4bb183a044a94f597c08b124133997be8e51d9fce102b1324794b8b84",
+        "size_in_bytes": 1412
+      },
+      {
+        "_path": "site-packages/AnyQt/QtWebKitWidgets.py",
+        "path_type": "hardlink",
+        "sha256": "a9ac2276f1363e3dd682052079ae6c021a825464256d8a7a334899fc3df4b338",
+        "sha256_in_prefix": "a9ac2276f1363e3dd682052079ae6c021a825464256d8a7a334899fc3df4b338",
+        "size_in_bytes": 708
+      },
+      {
+        "_path": "site-packages/AnyQt/QtWebSockets.py",
+        "path_type": "hardlink",
+        "sha256": "1b26e5dcedf4ed6ca782676318a08523ce0fa996a9e1d04f6b7eaa16b1efc10c",
+        "sha256_in_prefix": "1b26e5dcedf4ed6ca782676318a08523ce0fa996a9e1d04f6b7eaa16b1efc10c",
+        "size_in_bytes": 315
+      },
+      {
+        "_path": "site-packages/AnyQt/QtWidgets.py",
+        "path_type": "hardlink",
+        "sha256": "30e0e53c57624fab89c0598f7700d416decaf44471fad083f066ede78c367cfe",
+        "sha256_in_prefix": "30e0e53c57624fab89c0598f7700d416decaf44471fad083f066ede78c367cfe",
+        "size_in_bytes": 11055
+      },
+      {
+        "_path": "site-packages/AnyQt/QtWinExtras.py",
+        "path_type": "hardlink",
+        "sha256": "38a551cd2c34f02a6d8355aea44e6ec41c9b26f3a4132f120872f141b86c107a",
+        "sha256_in_prefix": "38a551cd2c34f02a6d8355aea44e6ec41c9b26f3a4132f120872f141b86c107a",
+        "size_in_bytes": 204
+      },
+      {
+        "_path": "site-packages/AnyQt/QtX11Extras.py",
+        "path_type": "hardlink",
+        "sha256": "1b7df64809a4b5e5925e989e581da4863876ec3690e4254f58ba062c7da0400a",
+        "sha256_in_prefix": "1b7df64809a4b5e5925e989e581da4863876ec3690e4254f58ba062c7da0400a",
+        "size_in_bytes": 358
+      },
+      {
+        "_path": "site-packages/AnyQt/QtXml.py",
+        "path_type": "hardlink",
+        "sha256": "a2d99b78eb8722706446d9dce237904c1d4dcea6c15b9f1d6b3cc791d117f1fc",
+        "sha256_in_prefix": "a2d99b78eb8722706446d9dce237904c1d4dcea6c15b9f1d6b3cc791d117f1fc",
+        "size_in_bytes": 308
+      },
+      {
+        "_path": "site-packages/AnyQt/QtXmlPatterns.py",
+        "path_type": "hardlink",
+        "sha256": "7a1e1e7f25761cb444c12482c9b8d3c5ff9c0b105a574ec2e15431a467419484",
+        "sha256_in_prefix": "7a1e1e7f25761cb444c12482c9b8d3c5ff9c0b105a574ec2e15431a467419484",
+        "size_in_bytes": 340
+      },
+      {
+        "_path": "site-packages/AnyQt/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "b4b809291050a9c671e778ae0b0def4b8b1d79543b8724db8f7f350daec1762c",
+        "sha256_in_prefix": "b4b809291050a9c671e778ae0b0def4b8b1d79543b8724db8f7f350daec1762c",
+        "size_in_bytes": 1957
+      },
+      {
+        "_path": "site-packages/AnyQt/_api.py",
+        "path_type": "hardlink",
+        "sha256": "c32459d8d623b16f6f90444ca6e3475c369bd6ed1f419e395c5e34f54bedda67",
+        "sha256_in_prefix": "c32459d8d623b16f6f90444ca6e3475c369bd6ed1f419e395c5e34f54bedda67",
+        "size_in_bytes": 3446
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtCore.py",
+        "path_type": "hardlink",
+        "sha256": "3fde254eb5d72d8c6be18438c6837fe46af7a6c51e597844abdee3af94e4f2f1",
+        "sha256_in_prefix": "3fde254eb5d72d8c6be18438c6837fe46af7a6c51e597844abdee3af94e4f2f1",
+        "size_in_bytes": 5665
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtDBus.py",
+        "path_type": "hardlink",
+        "sha256": "c3c469c3655f53ae08fcd99b23c4d3fb39832f95b6a53fd0ec3abf7d260dea17",
+        "sha256_in_prefix": "c3c469c3655f53ae08fcd99b23c4d3fb39832f95b6a53fd0ec3abf7d260dea17",
+        "size_in_bytes": 91
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtDesigner.py",
+        "path_type": "hardlink",
+        "sha256": "13547b154b2ad36ddaad756e6431886454ec0e706ab53987ba8f602186fa3db9",
+        "sha256_in_prefix": "13547b154b2ad36ddaad756e6431886454ec0e706ab53987ba8f602186fa3db9",
+        "size_in_bytes": 30
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtGui.py",
+        "path_type": "hardlink",
+        "sha256": "c41ee43b391f44ed14d9a030eae22ff83bff60fa65f07e3c017112d036758225",
+        "sha256_in_prefix": "c41ee43b391f44ed14d9a030eae22ff83bff60fa65f07e3c017112d036758225",
+        "size_in_bytes": 25159
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtHelp.py",
+        "path_type": "hardlink",
+        "sha256": "4692c3a4fa7a4d2f5b8eb89fd7feccd9e34fe45bb6fb196dbaf211c271b0c1d2",
+        "sha256_in_prefix": "4692c3a4fa7a4d2f5b8eb89fd7feccd9e34fe45bb6fb196dbaf211c271b0c1d2",
+        "size_in_bytes": 279
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtMultimedia.py",
+        "path_type": "hardlink",
+        "sha256": "d5749ae96276b4665926593dded47d5f1dd739b3688cbd2e431652be2f64a5d8",
+        "sha256_in_prefix": "d5749ae96276b4665926593dded47d5f1dd739b3688cbd2e431652be2f64a5d8",
+        "size_in_bytes": 215
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtNetwork.py",
+        "path_type": "hardlink",
+        "sha256": "e37329fa12cfa6f9c77ffc6063b63354aa7739c33fda4f33ae48598b1b6ae2af",
+        "sha256_in_prefix": "e37329fa12cfa6f9c77ffc6063b63354aa7739c33fda4f33ae48598b1b6ae2af",
+        "size_in_bytes": 971
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtOpenGL.py",
+        "path_type": "hardlink",
+        "sha256": "63469d607dfb3da5f600172b6b99ccaffedbbebc96bf6b77984d2c3508229c1f",
+        "sha256_in_prefix": "63469d607dfb3da5f600172b6b99ccaffedbbebc96bf6b77984d2c3508229c1f",
+        "size_in_bytes": 163
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtSql.py",
+        "path_type": "hardlink",
+        "sha256": "98f410d4fe9c76382b3bef555a70afebecedb08aea7573fd9c306c6b4a3fc9db",
+        "sha256_in_prefix": "98f410d4fe9c76382b3bef555a70afebecedb08aea7573fd9c306c6b4a3fc9db",
+        "size_in_bytes": 306
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtSvg.py",
+        "path_type": "hardlink",
+        "sha256": "1efd37f4d20902d8b3ea8a00f280b91c00bf7f16e22f50d5e95fef680e27b327",
+        "sha256_in_prefix": "1efd37f4d20902d8b3ea8a00f280b91c00bf7f16e22f50d5e95fef680e27b327",
+        "size_in_bytes": 166
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtTest.py",
+        "path_type": "hardlink",
+        "sha256": "46e49cb6c1d20a8f2bfd94d15c4bd9880496a2578a67225c2229db068b57c9e8",
+        "sha256_in_prefix": "46e49cb6c1d20a8f2bfd94d15c4bd9880496a2578a67225c2229db068b57c9e8",
+        "size_in_bytes": 31
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtWebKit.py",
+        "path_type": "hardlink",
+        "sha256": "5eddb763caf3d51d244fffa72ecd9196b18af03d74f3047de57cabbebcc636eb",
+        "sha256_in_prefix": "5eddb763caf3d51d244fffa72ecd9196b18af03d74f3047de57cabbebcc636eb",
+        "size_in_bytes": 436
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtXml.py",
+        "path_type": "hardlink",
+        "sha256": "d4afe4cc9876ab94205004dd3085f0b30e6e149c9ca843640aa3661f63bf1d30",
+        "sha256_in_prefix": "d4afe4cc9876ab94205004dd3085f0b30e6e149c9ca843640aa3661f63bf1d30",
+        "size_in_bytes": 673
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/QtXmlPatterns.py",
+        "path_type": "hardlink",
+        "sha256": "e4a9009d27f229e49090bbe30ca83226c7db43057e84dd5d98cc53f0f2e1925d",
+        "sha256_in_prefix": "e4a9009d27f229e49090bbe30ca83226c7db43057e84dd5d98cc53f0f2e1925d",
+        "size_in_bytes": 375
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/_utils.py",
+        "path_type": "hardlink",
+        "sha256": "5622d2a1caa991a25f3f83166d9bddf138cc2307a7b85751e581812f2081fa0b",
+        "sha256_in_prefix": "5622d2a1caa991a25f3f83166d9bddf138cc2307a7b85751e581812f2081fa0b",
+        "size_in_bytes": 677
+      },
+      {
+        "_path": "site-packages/AnyQt/_backport/uic.py",
+        "path_type": "hardlink",
+        "sha256": "7ba8e2aa3ebe5ee20bc84c2cc706f346e753c64e9a4f2b2b6431854434bf524a",
+        "sha256_in_prefix": "7ba8e2aa3ebe5ee20bc84c2cc706f346e753c64e9a4f2b2b6431854434bf524a",
+        "size_in_bytes": 23
+      },
+      {
+        "_path": "site-packages/AnyQt/_fixes.py",
+        "path_type": "hardlink",
+        "sha256": "25e975d22a429a2c750a24931c9a79aeffd4c0059ba06661bfc7976c313aced7",
+        "sha256_in_prefix": "25e975d22a429a2c750a24931c9a79aeffd4c0059ba06661bfc7976c313aced7",
+        "size_in_bytes": 1808
+      },
+      {
+        "_path": "site-packages/AnyQt/importhooks.py",
+        "path_type": "hardlink",
+        "sha256": "e07089e792686ed50aae0ad012066224597295313e5bc6e78a1ff1853be06358",
+        "sha256_in_prefix": "e07089e792686ed50aae0ad012066224597295313e5bc6e78a1ff1853be06358",
+        "size_in_bytes": 3173
+      },
+      {
+        "_path": "site-packages/AnyQt/sip.py",
+        "path_type": "hardlink",
+        "sha256": "1b3069f9aca05d020066b7eb81218ac187f55faca9eeda821b1ec384fa9f2532",
+        "sha256_in_prefix": "1b3069f9aca05d020066b7eb81218ac187f55faca9eeda821b1ec384fa9f2532",
+        "size_in_bytes": 317
+      },
+      {
+        "_path": "site-packages/AnyQt/uic.py",
+        "path_type": "hardlink",
+        "sha256": "f7414b3e75d589425ea43ddd2f5ac4488afdd60cb8add1fef550fa78da54f8d6",
+        "sha256_in_prefix": "f7414b3e75d589425ea43ddd2f5ac4488afdd60cb8add1fef550fa78da54f8d6",
+        "size_in_bytes": 412
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtCore.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtDBus.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtDesigner.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtGui.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtHelp.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtMacExtras.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtMultimedia.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtMultimediaWidgets.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtNetwork.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtOpenGL.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtPrintSupport.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtQml.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtQuick.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtSql.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtSvg.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtTest.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtWebChannel.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtWebEngineCore.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtWebEngineWidgets.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtWebKit.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtWebKitWidgets.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtWebSockets.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtWidgets.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtWinExtras.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtX11Extras.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtXml.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/QtXmlPatterns.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/_api.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtCore.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtDBus.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtDesigner.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtGui.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtHelp.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtMultimedia.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtNetwork.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtOpenGL.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtSql.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtSvg.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtTest.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtWebKit.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtXml.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/QtXmlPatterns.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/__init__.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/_utils.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/_backport/__pycache__/uic.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/_fixes.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/importhooks.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/sip.cpython-39.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/AnyQt/__pycache__/uic.cpython-39.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "anyqt",
+  "sha256": "1ea05a2f9fbad32265c43dd728b017205ace8fedcfcc28c5a97e9de53480b3b2",
+  "size": 39994,
+  "subdir": "noarch",
+  "timestamp": 1620308481669,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/anyqt-0.0.13-pyhd3eb1b0_0.conda",
+  "version": "0.0.13"
+}
