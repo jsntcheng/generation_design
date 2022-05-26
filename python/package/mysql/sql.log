@@ -1,4 +1,4 @@
-2022-05-12 20:49:20,038-root-INFO-Database Version:('5.7.34-log',)
-2022-05-12 20:49:20,038-root-INFO-数据库连接成功
-2022-05-12 20:49:20,064-root-INFO-数据库读取信息成功session_list->test
-2022-05-12 20:49:20,064-root-INFO-已经关闭sql连接
+2022-05-26 10:14:58,618-root-INFO-Database Version:('5.7.34-log',)
+2022-05-26 10:14:58,618-root-INFO-数据库连接成功
+2022-05-26 10:14:58,647-root-INFO-数据库读取信息成功session_list->('test', 'sdja', 'asdw', 'qwert', 'oop', 'djsk', 'ccd', 'ddx', 'sasd', 'sda', 'sdas', 'test2', 'asdsa', 'sdazx', 'sdaxx', 'saas', 'ss2', 'saaaaa', 'saazx', 'wq', 'hhhh', 'ssss', 'bbbb', '测试12', '事实上', 'test1', 'ddd', 'sssa', 'qqwqw', 'ssdasdaszx', 'qqq', 'qwqwqw', "sa'd'd'z'z", 'hhhhhhhhhhh', 'sdadsxx', 'ddasd', 'ssaz', 'lll', 'sdaz')
+2022-05-26 10:14:58,647-root-INFO-已经关闭sql连接

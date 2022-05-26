@@ -1,0 +1,23 @@
+2022-05-17 19:31:42,013-root-INFO-Database Version:('5.7.34-log',)
+2022-05-17 19:31:42,014-root-INFO-数据库连接成功
+2022-05-17 19:31:46,955-root-INFO-数据库读取信息成功user_info->('111', 'root', 'test', 'tingo', 'zz123')
+2022-05-17 19:31:46,979-root-INFO-数据库读取信息成功user_info->123456
+2022-05-17 19:31:47,454-root-INFO-已经关闭sql连接
+2022-05-17 19:31:51,023-root-INFO-Database Version:('5.7.34-log',)
+2022-05-17 19:31:51,023-root-INFO-数据库连接成功
+2022-05-17 19:31:51,049-root-INFO-数据库读取信息成功session_list->('test', 'sdja', 'asdw', 'qwert', 'oop', 'djsk', 'ccd', 'ddx', 'sasd', 'sda', 'sdas', 'test2', 'asdsa', 'sdazx', 'sdaxx', 'saas', 'ss2', 'saaaaa', 'saazx', 'wq', 'hhhh')
+2022-05-17 19:31:51,112-root-INFO-写入数据库成功('root', 'ssss', '', '', '')->session_list
+2022-05-17 19:31:51,112-root-INFO-已经关闭sql连接
+2022-05-17 19:32:05,843-root-INFO-Database Version:('5.7.34-log',)
+2022-05-17 19:32:05,843-root-INFO-数据库连接成功
+2022-05-17 19:32:05,881-root-INFO-写入数据库成功('root', 'ssss', 'dd', '启动浏览器', "'https://www.baidu.com'")->session_list
+2022-05-17 19:32:05,882-root-INFO-已经关闭sql连接
+2022-05-17 19:34:53,657-root-INFO-Database Version:('5.7.34-log',)
+2022-05-17 19:34:53,657-root-INFO-数据库连接成功
+2022-05-17 19:34:53,692-root-INFO-写入数据库成功('root', 'ssss', '', '关闭浏览器', 'dd')->session_list
+2022-05-17 19:34:53,692-root-INFO-已经关闭sql连接
+2022-05-17 19:37:18,488-root-INFO-Database Version:('5.7.34-log',)
+2022-05-17 19:37:18,488-root-INFO-数据库连接成功
+2022-05-17 19:37:18,514-root-INFO-数据库读取信息成功session_list->('test', 'sdja', 'asdw', 'qwert', 'oop', 'djsk', 'ccd', 'ddx', 'sasd', 'sda', 'sdas', 'test2', 'asdsa', 'sdazx', 'sdaxx', 'saas', 'ss2', 'saaaaa', 'saazx', 'wq', 'hhhh', 'ssss')
+2022-05-17 19:37:18,555-root-INFO-写入数据库成功('root', 'bbbb', '', '', '')->session_list
+2022-05-17 19:37:18,555-root-INFO-已经关闭sql连接

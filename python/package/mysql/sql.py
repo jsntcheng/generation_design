@@ -3,7 +3,6 @@ import re
 import pymysql
 import logging as log
 
-
 class SqlAction():
     def __init__(self):
         log.basicConfig(filename="sql.log",
@@ -116,7 +115,7 @@ class SqlAction():
             log.error(f'更新数据库失败，已回滚,sql:{sql}')
             raise Exception
 
-    def get_data_from_mysql(self, table, data_name ='*', condition='') -> None:
+    def get_data_from_mysql(self, table, data_name ='*', condition=''):
         '''
         从数据库读取信息
         :param table: str 表名

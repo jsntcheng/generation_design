@@ -8,10 +8,16 @@
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QDialog
+
+from PyQt5.QtCore import QAbstractTableModel, QModelIndex, Qt, QVariant
+
+from PyQt5.QtGui import QFont, QBrush
 from python.package.gui.gui_Qt.return_event_dialog import ReturnEventDialog
 from python.package.gui.gui_Qt.noreturn_event_dialog import NoReturnEventDialog
 from python.package.actions.web_actions import *
+from python.package.actions.excel_actions import *
 from python.package.mysql.sql import SqlAction
+
 
 class Return(QDialog, ReturnEventDialog):
     def __init__(self):
@@ -35,10 +41,23 @@ class Design(object):
             '点击元素':'click_element(',
             '获取元素属性':'get_element_attr(',
             '设置输入框':'set_input(',
-            '获取元素内文字':'get_element_txt('
+            '获取元素内文字':'get_element_txt(',
+            '打开Excel文件':'open_excel(',
+            '创建Excel文档':'create_excel(',
+            '保存Excel文档':'save_excel(',
+            '新建Sheet页':'create_sheet(',
+            '删除Sheet页':'del_sheet(',
+            '合并单元格':'merge_cells(',
+            '写入内容':'insert_into_excel(',
+            '读取内容':'read_excel(',
+            '设置背景色':'color_cell('
         }
-        self.no_return_list = ['关闭浏览器','切换操作页面','刷新页面','点击元素','设置输入框']
+        self.no_return_list = ['关闭浏览器','切换操作页面','刷新页面','点击元素','设置输入框','保存Excel文档','合并单元格','写入内容','设置背景色']
         self.user = ''
+        self.project_name = ''
+        self.sm = QtGui.QStandardItemModel()
+        self.sm.setHorizontalHeaderItem(0, QtGui.QStandardItem("变量名"))
+        self.sm.setHorizontalHeaderItem(1, QtGui.QStandardItem("模块名"))
         self.Return = Return()
         self.NoReturn = NoReturn()
         self.MainWindow = MainWindow
@@ -223,21 +242,53 @@ class Design(object):
         if item.text(0) in self.no_return_list:
             self.NoReturn.tool.setText(_translate('Dialog',item.text(0)))
             self.NoReturn.param.setText(_translate("Dialog", get_doc(self.tree_dict[item.text(0)][:-1])))
+            sql = SqlAction()
+            param_info = sql.get_data_from_mysql('session_list','mem,use_info',f"user = '{self.user}' and project = '{self.project_name}'")
+            count = 0
+            for x_index,x_data in enumerate(param_info):
+                if param_info == ('', ''):
+                    count -= 1
+                    continue
+                if x_data[0] == '':
+                    count -= 1
+                    continue
+                for y_index,y_data in enumerate(x_data):
+                    self.sm.setItem(x_index+count,y_index,QtGui.QStandardItem(y_data))
+            sql.quit_database()
+            self.NoReturn.tableView.setModel(self.sm)
             self.NoReturn.show()
         else:
             self.Return.tool.setText(_translate("Dialog", item.text(0)))
             self.Return.param.setText(_translate("Dialog", get_doc(self.tree_dict[item.text(0)][:-1])))
+            sql = SqlAction()
+            param_info = sql.get_data_from_mysql('session_list', 'mem,use_info',
+                                                 f"user = '{self.user}' and project = '{self.project_name}'")
+            count = 0
+            for x_index, x_data in enumerate(param_info):
+                if param_info == ('', ''):
+                    count -= 1
+                    continue
+                if x_data[0] == '':
+                    count -= 1
+                    continue
+                for y_index, y_data in enumerate(x_data):
+                    self.sm.setItem(x_index+count, y_index, QtGui.QStandardItem(y_data))
+            sql.quit_database()
+            self.Return.tableView.setModel(self.sm)
             self.Return.show()
 
 
 
     def run_it(self):
-        temp_file = open('temp.py','w',encoding='gbk')
-        temp_file.write(self.plainTextEdit.toPlainText())
+        temp_file = open('temp.py','w')
+        temp_file.write('#coding:utf-8\n'+self.plainTextEdit.toPlainText())
         path = os.path.dirname(__file__)
         path2 = path
-        path.strip('package\gui\gui_Qt')
-        os.system(path + 'python' + path2 + '\\temp.py')
+        path = path.strip('package\gui\gui_Qt')
+        print(path + '\python.exe ' + path + '\package' + '\\temp.py')
+        import subprocess
+        subprocess.Popen([path + '\python.exe', path + '\package' + '\\temp.py'])
+        # os.system(path + '\python.exe ' + path + '\package' + '\\temp.py')
 
     def change_title(self,name):
         _translate = QtCore.QCoreApplication.translate

@@ -1,19 +1,8 @@
-import time
-
-import os
-
+#coding:utf-8
 from actions.web_actions import *
-
-
-#å¯åŠ¨æµè§ˆå™¨
-driver=create_browser('https://www.baidu.com')
-
-#è®¾ç½®è¾“å…¥æ¡†
-set_input(driver,'//*[@id="kw"]','ä¸­å›½å¤©æ°”ç½‘')
-
-#ç‚¹å‡»å…ƒç´ 
-click_element(driver,'//*[@id="su"]')
-
-
-time.sleep(5)
-close_browser(driver)
+from time import sleep
+#Æô¶¯ä¯ÀÀÆ÷
+dd=create_browser('https://www.baidu.com')
+sleep(5)
+#¹Ø±Õä¯ÀÀÆ÷
+close_browser(dd)
