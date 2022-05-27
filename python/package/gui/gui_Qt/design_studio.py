@@ -240,17 +240,12 @@ class Design(object):
 
     def function(self, item):
         _translate = QtCore.QCoreApplication.translate
-        print(item.text(0))
         if item.text(0) in self.no_return_list:
-            print(111)
             self.NoReturn.tool.setText(_translate('Dialog',item.text(0)))
-            print(222)
             self.NoReturn.param.setText(_translate("Dialog", get_doc(self.tree_dict[item.text(0)][:-1])))
-            print(333)
             sql = SqlAction()
             param_info = sql.get_data_from_mysql('session_list','mem,use_info',f"user = '{self.user}' and project = '{self.project_name}'")
             count = 0
-            print(444)
             for x_index,x_data in enumerate(param_info):
                 if param_info == ('', ''):
                     count -= 1
@@ -264,12 +259,9 @@ class Design(object):
             self.NoReturn.tableView.setModel(self.sm)
             self.NoReturn.show()
         else:
-            print(1)
             self.Return.tool.setText(_translate("Dialog", item.text(0)))
-            print(2)
             print(get_doc(self.tree_dict[item.text(0)][:-1]))
             self.Return.param.setText(_translate("Dialog", get_doc(self.tree_dict[item.text(0)][:-1])))
-            print(3)
             sql = SqlAction()
             param_info = sql.get_data_from_mysql('session_list', 'mem,use_info',
                                                  f"user = '{self.user}' and project = '{self.project_name}'")
