@@ -42,7 +42,6 @@ class LoginWin(QDialog, Login_window):
                 self.showDialog('密码错误')
         self.sql.quit_database()
 
-
 class CreateProjectWin(QDialog, CreateProject):
     def __init__(self):
         super(CreateProjectWin, self).__init__(None)
@@ -102,13 +101,11 @@ class NewUserWin(QDialog, NewUser):
         super(QDialog, self).__init__(None)
         self.setupUi(self)
 
-
 class IndexWin(QMainWindow, IndexPage):
     def __init__(self):
         super(QMainWindow, self).__init__(None)
         self.setupUi(self)
         self.user = ''
-
 
 class DesignWin(QMainWindow, Design):
     def __init__(self):
