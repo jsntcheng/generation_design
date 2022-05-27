@@ -8,15 +8,11 @@
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QDialog
-
-from PyQt5.QtCore import QAbstractTableModel, QModelIndex, Qt, QVariant
-
-from PyQt5.QtGui import QFont, QBrush
-from python.package.gui.gui_Qt.return_event_dialog import ReturnEventDialog
-from python.package.gui.gui_Qt.noreturn_event_dialog import NoReturnEventDialog
-from python.package.actions.web_actions import *
-from python.package.actions.excel_actions import *
-from python.package.mysql.sql import SqlAction
+from ..gui_Qt.return_event_dialog import ReturnEventDialog
+from ..gui_Qt.noreturn_event_dialog import NoReturnEventDialog
+from web_actions import *
+from excel_actions import *
+from sql import SqlAction
 
 
 class Return(QDialog, ReturnEventDialog):
