@@ -104,28 +104,28 @@ def color_cell(excel,cell,color,sheet = 1):
     sht.range(cell).color = color
     excel.save(excel.fullname)
 
-def get_doc(func):
-    '''
-    获取方法内的说明文字
-    :param func: 方法
-    :return: str 说明文字
-    '''
-    txt_dict = {'open_excel':open_excel.__doc__.split('\n    '),
-                'create_excel':create_excel.__doc__.split('\n    '),
-                'save_excel':save_excel.__doc__.split('\n    '),
-                'create_sheet':create_sheet.__doc__.split('\n    '),
-                'del_sheet':del_sheet.__doc__.split('\n    '),
-                'merge_cells':merge_cells.__doc__.split('\n    '),
-                'insert_into_excel':insert_into_excel.__doc__.split('\n    '),
-                'read_excel':read_excel.__doc__.split('\n    '),
-                'color_cell':color_cell.__doc__.split('\n    ')
-                }
-    temp_list = txt_dict[func]
-    result = ""
-    for i in temp_list:
-        if i[0:6] == ':param':
-            result += i.replace(':param ','')+'  '
-    return result
+# def get_doc(func):
+#     '''
+#     获取方法内的说明文字
+#     :param func: 方法
+#     :return: str 说明文字
+#     '''
+#     txt_dict = {'open_excel':open_excel.__doc__.split('\n    '),
+#                 'create_excel':create_excel.__doc__.split('\n    '),
+#                 'save_excel':save_excel.__doc__.split('\n    '),
+#                 'create_sheet':create_sheet.__doc__.split('\n    '),
+#                 'del_sheet':del_sheet.__doc__.split('\n    '),
+#                 'merge_cells':merge_cells.__doc__.split('\n    '),
+#                 'insert_into_excel':insert_into_excel.__doc__.split('\n    '),
+#                 'read_excel':read_excel.__doc__.split('\n    '),
+#                 'color_cell':color_cell.__doc__.split('\n    ')
+#                 }
+#     temp_list = txt_dict[func]
+#     result = ""
+#     for i in temp_list:
+#         if i[0:6] == ':param':
+#             result += i.replace(':param ','')+'  '
+#     return result
 if __name__ == '__main__':
     wb = create_excel('test1','D://')
     create_sheet(wb,'tt')

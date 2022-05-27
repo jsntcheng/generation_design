@@ -11,7 +11,6 @@ from package.gui.gui_Qt.login import Login_window
 from package.gui.gui_Qt.new_user import NewUser
 from python.package.mysql.sql import SqlAction
 
-
 class LoginWin(QDialog, Login_window):
     def __init__(self, index):
         super(QDialog, self).__init__(None)
@@ -65,7 +64,7 @@ class CreateProjectWin(QDialog, CreateProject):
         sql.quit_database()
         design.project_name = session_insert
         design.change_title(session_insert)
-        design.plainTextEdit.setPlainText('from actions.web_actions import *\nfrom actions.excel_actions import *')
+        design.plainTextEdit.setPlainText('from actions.web_actions import *\nfrom actions.excel_actions import *\nfrom actions.email_action import *\nfrom actions.code_actions import *')
         self.close()
         design.show()
 
@@ -88,7 +87,7 @@ class OpenProjectWin(QDialog, CreateProject):
             return 0
         design.project_name = session_insert
         design.change_title(session_insert)
-        design.plainTextEdit.setPlainText('from actions.web_actions import *\nfrom actions.excel_actions import *')
+        design.plainTextEdit.setPlainText('from actions.web_actions import *\nfrom actions.excel_actions import *\nfrom actions.email_action import *\nfrom actions.code_actions import *')
         infos = sql.get_data_from_mysql('session_list','mem,use_info,param',f"user = '{self.user}' and project = '{session_insert}'")
         for i in infos[1:]:
             if i[0]!='':
@@ -119,7 +118,7 @@ class DesignWin(QMainWindow, Design):
         self.project_name = ''
         self.NoReturn.pushButton.clicked.connect(self.get_noreturn_param)
         self.Return.pushButton.clicked.connect(self.get_return_param)
-        self.plainTextEdit.setPlainText('from actions.web_actions import *\nfrom actions.excel_actions import *')
+        self.plainTextEdit.setPlainText('from actions.web_actions import *\nfrom actions.excel_actions import *\nfrom actions.email_action import *\nfrom actions.code_actions import *')
         self.tab_num = 0
 
     def get_return_param(self):

@@ -1,6 +1,6 @@
 #coding:utf-8
-from actions.web_actions import *
-from actions.excel_actions import *
+from package.actions.web_actions import *
+from package.actions.excel_actions import *
 #启动浏览器
 driver=create_browser('https://www.baidu.com')
 
@@ -11,7 +11,7 @@ switch_page(driver,2)
 refresh_page(driver)
 
 #获取所有元素
-elements=get_all_element(driver,'//*/)
+elements=get_all_element(driver,'//*/')
 
 #关闭浏览器
 close_browser(driver)

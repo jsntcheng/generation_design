@@ -1,5 +1,7 @@
 from time import sleep
-
+from .excel_actions import *
+from .email_action import *
+from .code_actions import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -42,9 +44,9 @@ def switch_page(driver, page_num):
     :return:
     '''
     try:
-        page_list = driver.handles
-        driver.switch_to.window(page_list[page_num+1])
-        print(f'成功切换到第{page_num+1}页')
+        page_list = driver.window_handles
+        driver.switch_to.window(page_list[page_num-1])
+        print(f'成功切换到第{page_num}页')
     except:
         driver.quit()
         raise Exception('切换操作页面失败')
@@ -102,6 +104,7 @@ def get_all_element(driver, selector, start_element = None, timeout = 10):
                 return start_element.find_elements(by=By.XPATH, value=selector)
         except:
             count += 1
+            sleep(1)
     driver.quit()
     raise Exception('获取元素超时')
 
@@ -157,7 +160,7 @@ def get_element_txt(driver, selector, start_element = None, timeout = 10):
     :param timeout: 超时时间
     :return: str 元素内文字
     '''
-    return wait_element(driver,selector,start_element,timeout).text()
+    return wait_element(driver,selector,start_element,timeout).text
 
 def get_doc(func):
     '''
@@ -174,7 +177,21 @@ def get_doc(func):
                 'click_element':click_element.__doc__.split('\n    '),
                 'get_element_attr':get_element_attr.__doc__.split('\n    '),
                 'get_element_txt':get_element_txt.__doc__.split('\n    '),
-                'set_input':set_input.__doc__.split('\n    ')
+                'set_input':set_input.__doc__.split('\n    '),
+                'open_excel': open_excel.__doc__.split('\n    '),
+                'create_excel': create_excel.__doc__.split('\n    '),
+                'save_excel': save_excel.__doc__.split('\n    '),
+                'create_sheet': create_sheet.__doc__.split('\n    '),
+                'del_sheet': del_sheet.__doc__.split('\n    '),
+                'merge_cells': merge_cells.__doc__.split('\n    '),
+                'insert_into_excel': insert_into_excel.__doc__.split('\n    '),
+                'read_excel': read_excel.__doc__.split('\n    '),
+                'color_cell': color_cell.__doc__.split('\n    '),
+                'create_mem': create_mem.__doc__.split('\n    '),
+                'print_mem': print_mem.__doc__.split('\n    '),
+                'set_value': set_value.__doc__.split('\n    '),
+                'send_emails': send_emails.__doc__.split('\n    '),
+                'sleep_time':sleep_time.__doc__.split('\n    ')
                 }
     temp_list = txt_dict[func]
     result = ""

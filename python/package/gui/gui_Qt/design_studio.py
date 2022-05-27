@@ -50,9 +50,14 @@ class Design(object):
             '合并单元格':'merge_cells(',
             '写入内容':'insert_into_excel(',
             '读取内容':'read_excel(',
-            '设置背景色':'color_cell('
+            '设置背景色':'color_cell(',
+            '创建变量':'create_mem(',
+            '打印变量':'print_mem(',
+            '赋值操作':'set_value(',
+            '发送邮件':'send_emails(',
+            '延迟执行':'sleep_time('
         }
-        self.no_return_list = ['关闭浏览器','切换操作页面','刷新页面','点击元素','设置输入框','保存Excel文档','合并单元格','写入内容','设置背景色']
+        self.no_return_list = ['关闭浏览器','切换操作页面','刷新页面','点击元素','设置输入框','保存Excel文档','合并单元格','写入内容','设置背景色','打印变量','发送邮件']
         self.user = ''
         self.project_name = ''
         self.sm = QtGui.QStandardItemModel()
@@ -213,7 +218,7 @@ class Design(object):
         self.treeWidget.topLevelItem(3).child(0).setText(0, _translate("MainWindow", "创建变量"))
         self.treeWidget.topLevelItem(3).child(1).setText(0, _translate("MainWindow", "打印变量"))
         self.treeWidget.topLevelItem(3).child(2).setText(0, _translate("MainWindow", "赋值操作"))
-        self.treeWidget.topLevelItem(3).child(3).setText(0, _translate("MainWindow", "for循环"))
+        self.treeWidget.topLevelItem(3).child(3).setText(0, _translate("MainWindow", "延迟执行"))
         self.treeWidget.topLevelItem(3).child(4).setText(0, _translate("MainWindow", "while循环"))
         self.treeWidget.topLevelItem(3).child(5).setText(0, _translate("MainWindow", "if判断"))
         self.treeWidget.topLevelItem(4).setText(0, _translate("MainWindow", "邮件"))
@@ -239,12 +244,17 @@ class Design(object):
 
     def function(self, item):
         _translate = QtCore.QCoreApplication.translate
+        print(item.text(0))
         if item.text(0) in self.no_return_list:
+            print(111)
             self.NoReturn.tool.setText(_translate('Dialog',item.text(0)))
+            print(222)
             self.NoReturn.param.setText(_translate("Dialog", get_doc(self.tree_dict[item.text(0)][:-1])))
+            print(333)
             sql = SqlAction()
             param_info = sql.get_data_from_mysql('session_list','mem,use_info',f"user = '{self.user}' and project = '{self.project_name}'")
             count = 0
+            print(444)
             for x_index,x_data in enumerate(param_info):
                 if param_info == ('', ''):
                     count -= 1
@@ -258,8 +268,12 @@ class Design(object):
             self.NoReturn.tableView.setModel(self.sm)
             self.NoReturn.show()
         else:
+            print(1)
             self.Return.tool.setText(_translate("Dialog", item.text(0)))
+            print(2)
+            print(get_doc(self.tree_dict[item.text(0)][:-1]))
             self.Return.param.setText(_translate("Dialog", get_doc(self.tree_dict[item.text(0)][:-1])))
+            print(3)
             sql = SqlAction()
             param_info = sql.get_data_from_mysql('session_list', 'mem,use_info',
                                                  f"user = '{self.user}' and project = '{self.project_name}'")
@@ -280,11 +294,12 @@ class Design(object):
 
 
     def run_it(self):
-        temp_file = open('temp.py','w')
-        temp_file.write('#coding:utf-8\n'+self.plainTextEdit.toPlainText())
         path = os.path.dirname(__file__)
         path2 = path
         path = path.strip('package\gui\gui_Qt')
+        temp_file = open(path + '\package' + '\\temp.py','w')
+        temp_file.write('#coding:utf-8\n'+self.plainTextEdit.toPlainText())
+
         print(path + '\python.exe ' + path + '\package' + '\\temp.py')
         import subprocess
         subprocess.Popen([path + '\python.exe', path + '\package' + '\\temp.py'])
