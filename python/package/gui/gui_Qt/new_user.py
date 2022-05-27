@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 from PyQt5.QtWidgets import QMessageBox
 
-from sql import SqlAction
+from python.package.mysql.sql import SqlAction
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class NewUser(object):

@@ -38,3 +38,6 @@ print_mem(weather)
 
 #·¢ËÍÓÊ¼ş
 send_emails(['694625452@qq.com'],weather,'shanghai_weather')
+
+#¹Ø±Õä¯ÀÀÆ÷
+close_browser(browser)

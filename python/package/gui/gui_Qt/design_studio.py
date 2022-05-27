@@ -10,9 +10,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QDialog
 from ..gui_Qt.return_event_dialog import ReturnEventDialog
 from ..gui_Qt.noreturn_event_dialog import NoReturnEventDialog
-from web_actions import *
-from excel_actions import *
-from sql import SqlAction
+from python.package.actions.web_actions import *
+from python.package.actions.excel_actions import *
+from python.package.mysql.sql import SqlAction
 
 
 class Return(QDialog, ReturnEventDialog):

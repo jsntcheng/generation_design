@@ -8,8 +8,8 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
-from sql import SqlAction
-from smtp_sender import SMTPSender
+from python.package.mysql.sql import SqlAction
+from python.package.email.smtp_sender import SMTPSender
 
 class Forget(object):
     def setupUi(self, Dialog):

@@ -4,7 +4,7 @@ from .email_action import *
 from .code_actions import *
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
+from time import sleep
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 def create_browser(url):
